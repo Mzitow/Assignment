@@ -1,9 +1,13 @@
 #include <iostream>
 #include "Header.h"
+#include <array>
+#include <vector>
 
 
 
 using namespace std;
+
+double calculate_mean(double my_value[]);
 
 class Student {
 
@@ -19,7 +23,6 @@ private:
 
 public:
 
-	static int highscore;
 
 	//Default constructor to int. semester
 	Student(){
@@ -126,13 +129,18 @@ public:
 
 int main() {
 
-	SCV faiza;
+	vector<double> numbers = {10 , 12 , 8};
 
-	cout << faiza.calculate_commision(5000) << endl;
+	
+
+	Statistics stats;
 
 
-	cout << faiza.get_total_salary() << endl;
+	cout << stats.calculate_mean(numbers) << endl;
 	
 
 	return 0;
 }
+
+
+
