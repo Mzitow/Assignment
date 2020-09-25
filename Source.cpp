@@ -1,13 +1,9 @@
 #include <iostream>
-#include "Header.h"
-#include <array>
 #include <vector>
-
 
 
 using namespace std;
 
-double calculate_mean(double my_value[]);
 
 class Student {
 
@@ -129,15 +125,22 @@ public:
 
 int main() {
 
-	vector<double> numbers = {10 , 12 , 8};
 
-	
+	Student ababakr; // calls the default constructor
+	Student mohamed(80); //call the parameterized constructor and initializes degree  to 80
 
-	Statistics stats;
+	ababakr.find_student_grade(); //prints 0
+	mohamed.find_student_grade(); //prints 80
 
+	//Question 2
 
-	cout << stats.calculate_mean(numbers) << endl;
-	
+	//create object of type SCV
+	SCV mohamed_salary;
+
+	//calculate his commision if he sells 5000 goods of worth
+	mohamed_salary.calculate_commision(5000); // will return 450
+	mohamed_salary.get_total_salary(); // will add basic (200) + 450 = 650
+
 
 	return 0;
 }
